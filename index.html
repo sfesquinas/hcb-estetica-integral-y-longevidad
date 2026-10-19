@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HCB Instituto de Estética Integral y Longevidad</title>
+<meta name="description" content="Estética, cirugía plástica, salud hormonal, capilar, control de peso y longevidad en un único programa personalizado. Grupo HCB Hospitales · Benidorm, Dénia y Calpe.">
+<meta property="og:title" content="HCB Instituto de Estética Integral y Longevidad">
+<meta property="og:description" content="Siete áreas médicas, un solo programa personalizado. Benidorm · Dénia · Calpe.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#006d8c">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/logo-hcb.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petroleo:#006d8c;      /* titulares HCB */
+  --petroleo-osc:#0a4f66;
+  --tinta:#0a2f3e;         /* texto principal */
+  --logo:#457e9b;          /* azul logotipo */
+  --turquesa:#5bbec6;      /* línea de acento HCB */
+  --agua:#76bec6;          /* barras de título HCB */
+  --niebla:#e6f4f4;        /* fondo HCB */
+  --blanco:#ffffff;
+  --gris:#5b6f78;
+  --linea:#d3e6e8;
+  --error:#b3261e;
+  --radio:18px;
+  --sombra:0 18px 40px -22px rgba(10,47,62,.35);
+  --ancho:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Roboto',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--tinta);background:var(--blanco);line-height:1.6;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--petroleo);font-weight:500}
+h1,h2,h3{font-weight:300;line-height:1.15;color:var(--petroleo)}
+h2{font-size:clamp(2rem,4vw,2.9rem);margin:.35em 0 .45em}
+h3{font-weight:500;font-size:1.25rem}
+.lead{font-size:1.12rem;color:var(--gris);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:.95em 1.6em;border-radius:999px;font:inherit;font-weight:500;font-size:.98rem;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn-primario{background:var(--petroleo);color:#fff}
+.btn-primario:hover{background:var(--petroleo-osc)}
+.btn-linea{border-color:var(--petroleo);color:var(--petroleo);background:transparent}
+.btn-linea:hover{background:var(--petroleo);color:#fff}
+.btn:focus-visible,select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--turquesa);outline-offset:2px}
+
+/* Cabecera */
+.cabecera{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--linea)}
+.cabecera .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+.marca img{height:44px;width:auto}
+.marca span{border-left:1px solid var(--linea);padding-left:14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--petroleo);line-height:1.35;max-width:190px}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a.enlace{text-decoration:none;font-size:.95rem;color:var(--tinta)}
+.nav a.enlace:hover{color:var(--petroleo)}
+.idiomas{display:flex;gap:2px;background:var(--niebla);border-radius:999px;padding:3px}
+.idiomas button{border:0;background:transparent;font:inherit;font-size:.78rem;font-weight:500;letter-spacing:.06em;color:var(--gris);padding:.38em .7em;border-radius:999px;cursor:pointer}
+.idiomas button[aria-pressed="true"]{background:var(--blanco);color:var(--petroleo);box-shadow:0 1px 4px rgba(10,47,62,.12)}
+.nav .btn{padding:.7em 1.2em;font-size:.9rem}
+
+/* Hero */
+.hero{position:relative;background:var(--niebla);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--niebla) 38%,rgba(230,244,244,.55) 62%,rgba(230,244,244,.15));z-index:1}
+.hero-img{position:absolute;inset:0 0 0 35%;background:linear-gradient(135deg,#cfe8ea,#9fd2d7)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:84px}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4rem);margin:.3em 0 .25em;color:var(--tinta)}
+.hero h1 strong{font-weight:700;color:var(--petroleo);display:block}
+.hero .claim{font-size:1.2rem;color:var(--petroleo);font-weight:400;margin-bottom:1em}
+.hero .lead{color:var(--tinta);opacity:.85}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:2em}
+.sello{display:flex;gap:22px;flex-wrap:wrap;margin-top:2.4em;font-size:.88rem;color:var(--gris)}
+.sello span{display:flex;align-items:center;gap:8px}
+.sello span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--turquesa)}
+
+/* Formulario */
+.form-card{background:var(--blanco);border-radius:var(--radio);box-shadow:var(--sombra);padding:34px 32px 30px;position:relative;scroll-margin-top:100px}
+.form-card::after{content:"";position:absolute;left:32px;right:32px;bottom:0;height:4px;border-radius:4px 4px 0 0;background:var(--turquesa)}
+.form-card h2{font-size:1.65rem;margin:0 0 .25em;color:var(--petroleo)}
+.form-card .sub{font-size:.95rem;color:var(--gris);margin-bottom:1.3em}
+.campo{margin-bottom:14px}
+.campo label{display:block;font-size:.84rem;font-weight:500;margin-bottom:6px;color:var(--tinta)}
+.campo input,.campo select{width:100%;font:inherit;font-size:1rem;color:var(--tinta);background:#fbfdfd;border:1.5px solid var(--linea);border-radius:12px;padding:.78em .9em;appearance:none;-webkit-appearance:none;transition:border-color .2s}
+.campo select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23006d8c' stroke-width='1.8' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.campo input:focus,.campo select:focus{border-color:var(--petroleo);outline:none}
+.campo select:disabled{opacity:.55}
+.campo.invalido input,.campo.invalido select{border-color:var(--error)}
+.campo .msg{display:none;font-size:.78rem;color:var(--error);margin-top:4px}
+.campo.invalido .msg{display:block}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--gris);margin:10px 0}
+.check input{margin-top:3px;width:17px;height:17px;accent-color:var(--petroleo);flex:none}
+.check.invalido{color:var(--error)}
+.form-card .btn{width:100%;margin-top:10px;padding:1.05em}
+.form-card .btn[disabled]{opacity:.6;cursor:wait}
+.legal-mini{font-size:.7rem;color:var(--gris);margin-top:14px;line-height:1.45}
+.legal-mini a{color:var(--petroleo)}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.estado{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;font-size:.9rem}
+.estado.ok{display:block;background:#e3f4ef;color:#0d5c47}
+.estado.ko{display:block;background:#fbe9e7;color:var(--error)}
+
+/* Secciones */
+section{padding:96px 0}
+.intro{background:var(--blanco)}
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.cita{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:300;line-height:1.35;color:var(--tinta);border-left:4px solid var(--turquesa);padding-left:26px}
+.valores{display:grid;gap:22px;margin-top:8px}
+.valor h3{color:var(--petroleo);margin-bottom:.2em}
+.valor p{color:var(--gris);font-size:.98rem}
+
+.pilares{background:var(--niebla)}
+.cabeza{max-width:760px;margin-bottom:48px}
+.rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pilar.v360{grid-column:span 2}
+.pilar{background:var(--blanco);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--linea);transition:transform .25s,box-shadow .25s}
+.pilar:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.pilar .foto{aspect-ratio:16/10;background:linear-gradient(135deg,#d7eef0,#9fd2d7);overflow:hidden}
+.pilar .foto img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pilar:hover .foto img{transform:scale(1.04)}
+.pilar .cuerpo{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1;position:relative}
+.pilar .num{font-size:.75rem;letter-spacing:.2em;color:var(--turquesa);font-weight:700}
+.pilar h3{color:var(--petroleo);font-size:1.32rem;margin:.25em 0 .45em;font-weight:500}
+.pilar p{font-size:.95rem;color:var(--gris);margin-bottom:1em}
+.pilar ul{list-style:none;display:grid;gap:7px;margin-bottom:1.3em}
+.pilar li{font-size:.92rem;padding-left:20px;position:relative}
+.pilar li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--turquesa)}
+.pilar .mas{margin-top:auto;align-self:flex-start;font-size:.88rem;font-weight:500;color:var(--petroleo);background:none;border:0;cursor:pointer;padding:0;font-family:inherit;border-bottom:1.5px solid var(--turquesa)}
+.pilar.v360{background:var(--petroleo);color:#fff}
+.pilar.v360 .cuerpo{justify-content:center;padding:36px 30px}
+.pilar.v360 h3,.pilar.v360 .num{color:#fff}
+.pilar.v360 p{color:rgba(255,255,255,.85)}
+.pilar.v360 .mas{color:#fff;border-color:var(--turquesa)}
+
+.experiencia .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.exp-img{border-radius:var(--radio);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,#d7eef0,#9fd2d7)}
+.exp-img img{width:100%;height:100%;object-fit:cover}
+.pasos{list-style:none;margin-top:26px;display:grid;gap:26px;counter-reset:paso}
+.pasos li{display:grid;grid-template-columns:56px 1fr;gap:18px;counter-increment:paso}
+.pasos li::before{content:counter(paso);width:56px;height:56px;border-radius:50%;border:1.5px solid var(--turquesa);display:grid;place-items:center;font-size:1.3rem;color:var(--petroleo);font-weight:300}
+.pasos h3{color:var(--petroleo);margin-bottom:.2em}
+.pasos p{color:var(--gris);font-size:.97rem}
+
+.porque{background:var(--tinta);color:#fff}
+.porque h2{color:#fff}
+.porque .eyebrow{color:var(--turquesa)}
+.porque .lead{color:rgba(255,255,255,.75)}
+.razones{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.razon{border-top:2px solid var(--turquesa);padding-top:20px}
+.razon h3{color:#fff;font-size:1.1rem;margin-bottom:.4em}
+.razon p{color:rgba(255,255,255,.72);font-size:.94rem}
+
+.centros-lista{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.centro{border:1.5px solid var(--linea);border-radius:var(--radio);padding:28px;display:flex;flex-direction:column;gap:10px}
+.centro .tipo{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--turquesa);font-weight:700}
+.centro h3{color:var(--petroleo);font-size:1.35rem}
+.centro p{font-size:.94rem;color:var(--gris)}
+.centro .dato{font-size:.92rem;color:var(--tinta)}
+.centro .btn{margin-top:auto;align-self:flex-start;padding:.7em 1.2em;font-size:.88rem}
+
+.cta-final{background:var(--niebla);text-align:center}
+.cta-final h2{max-width:22ch;margin-left:auto;margin-right:auto}
+.cta-final .lead{margin:0 auto 1.8em}
+
+.pie{background:var(--petroleo-osc);color:rgba(255,255,255,.8);padding:56px 0 34px;font-size:.88rem}
+.pie .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.pie img{height:46px;width:auto;margin-bottom:16px}
+.pie h4{color:#fff;font-weight:500;font-size:.9rem;margin-bottom:12px;letter-spacing:.04em}
+.pie ul{list-style:none;display:grid;gap:8px}
+.pie a{text-decoration:none}
+.pie a:hover{color:#fff;text-decoration:underline}
+.pie .base{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.6)}
+
+.revelar{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.revelar.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1020px){
+  .nav a.enlace{display:none}
+  .hero .wrap,.intro .wrap,.experiencia .wrap{grid-template-columns:1fr;gap:44px}
+  .hero-img{inset:0;opacity:.28}
+  .hero::before{background:linear-gradient(180deg,rgba(230,244,244,.7),var(--niebla) 70%)}
+  .razones{grid-template-columns:1fr 1fr}
+  .rejilla{grid-template-columns:1fr 1fr}
+  .centros-lista{grid-template-columns:1fr}
+  .exp-img{aspect-ratio:16/10}
+  .pie .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:68px 0}
+  .cabecera .wrap{height:64px}
+  .marca img{height:34px}
+  .marca span,.nav .btn{display:none}
+  .hero .wrap{padding-top:44px;padding-bottom:56px}
+  .form-card{padding:26px 20px 24px}
+  .form-card::after{left:20px;right:20px}
+  .fila{grid-template-columns:1fr}
+  .rejilla{grid-template-columns:1fr}
+  .pilar.v360{grid-column:auto}
+  .razones{grid-template-columns:1fr}
+  .pie .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Grupo HCB Hospitales">
+      <img src="assets/logo-hcb.png" alt="Grupo HCB Hospitales" width="423" height="195">
+      <span data-i18n="marca_sub">Instituto de Estética Integral y Longevidad</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="enlace" href="#pilares" data-i18n="nav_pilares">Áreas</a>
+      <a class="enlace" href="#experiencia" data-i18n="nav_experiencia">Cómo funciona</a>
+      <a class="enlace" href="#centros" data-i18n="nav_centros">Centros</a>
+      <div class="idiomas" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="nl">NL</button>
+        <button type="button" data-lang="de">DE</button>
+      </div>
+      <a class="btn btn-primario" href="#solicitud" data-i18n="cta_corto">Pedir cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- HERO + FORMULARIO -->
+<section class="hero" style="padding:0">
+  <div class="hero-img" aria-hidden="true"><img data-img="hero" alt="" fetchpriority="high"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-i18n="hero_eyebrow">Grupo HCB Hospitales · Costa Blanca</p>
+      <h1><span data-i18n="hero_t1">HCB Instituto de</span> <strong data-i18n="hero_t2">Estética Integral y Longevidad</strong></h1>
+      <p class="claim" data-i18n="hero_claim">Equilibrio, imagen y longevidad. La ciencia de vivir mejor.</p>
+      <p class="lead" data-i18n="hero_texto">Estética, cirugía plástica, salud capilar, control de peso, salud hormonal y longevidad, integrados en un único programa personalizado y con la seguridad de un entorno hospitalario.</p>
+      <div class="acciones">
+        <a class="btn btn-primario" href="#solicitud" data-i18n="hero_cta">Solicitar valoración</a>
+        <a class="btn btn-linea" href="#pilares" data-i18n="hero_cta2">Descubrir las áreas</a>
+      </div>
+      <div class="sello">
+        <span data-i18n="sello_1">Entorno hospitalario</span>
+        <span data-i18n="sello_2">Equipo multidisciplinar</span>
+        <span data-i18n="sello_3">Atención en ES · EN · NL · DE</span>
+      </div>
+    </div>
+
+    <form class="form-card" id="solicitud" novalidate>
+      <h2 data-i18n="form_titulo">Solicita tu primera valoración</h2>
+      <p class="sub" data-i18n="form_sub">Una coordinadora te llamará para organizar tu visita.</p>
+
+      <div class="campo">
+        <label for="nombre" data-i18n="f_nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="120">
+        <span class="msg" data-i18n="f_req">Campo obligatorio</span>
+      </div>
+      <div class="campo">
+        <label for="telefono" data-i18n="f_tel">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25" placeholder="+34 600 000 000">
+        <span class="msg" data-i18n="f_tel_err">Introduce un teléfono válido</span>
+      </div>
+      <div class="campo">
+        <label for="pilar" data-i18n="f_area">Área de interés</label>
+        <select id="pilar" name="pilar_id" required></select>
+        <span class="msg" data-i18n="f_req">Campo obligatorio</span>
+      </div>
+      <div class="campo">
+        <label for="subpilar" data-i18n="f_sub">Tratamiento o necesidad</label>
+        <select id="subpilar" name="subpilar_id" required disabled></select>
+        <span class="msg" data-i18n="f_req">Campo obligatorio</span>
+      </div>
+      <div class="campo">
+        <label for="centro" data-i18n="f_centro">Centro donde quieres ser atendido/a</label>
+        <select id="centro" name="centro" required></select>
+        <span class="msg" data-i18n="f_req">Campo obligatorio</span>
+      </div>
+
+      <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <label class="check" id="chk-priv"><input type="checkbox" name="consentimiento_privacidad" value="1" required> <span data-i18n-html="f_priv">He leído y acepto la <a href="#" class="url-privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+      <label class="check"><input type="checkbox" name="consentimiento_comercial" value="1"> <span data-i18n="f_com">Acepto recibir información sobre servicios y novedades de HCB (opcional).</span></label>
+
+      <button class="btn btn-primario" type="submit" data-i18n="f_enviar">Enviar solicitud</button>
+      <div class="estado" role="status" aria-live="polite"></div>
+
+      <p class="legal-mini" data-i18n-html="f_legal"><strong>Responsable:</strong> Grupo HCB Hospitales. <strong>Finalidad:</strong> gestionar tu solicitud y contactarte. <strong>Legitimación:</strong> tu consentimiento. <strong>Derechos:</strong> acceso, rectificación, supresión y demás, según se indica en la <a href="#" class="url-privacidad" target="_blank" rel="noopener">política de privacidad</a>.</p>
+    </form>
+  </div>
+</section>
+
+<!-- CONCEPTO -->
+<section class="intro">
+  <div class="wrap">
+    <div class="revelar">
+      <p class="eyebrow" data-i18n="intro_eyebrow">Nuestra visión</p>
+      <h2 data-i18n="intro_titulo">La salud no se entiende por partes</h2>
+      <p class="cita" data-i18n="intro_cita">La energía, la imagen, la composición corporal, el equilibrio hormonal y la vitalidad forman parte de una misma realidad. Por eso los cuidamos juntos.</p>
+    </div>
+    <div class="revelar">
+      <p class="lead" data-i18n="intro_texto" style="margin-bottom:28px">Hasta ahora, cada necesidad se atendía en una consulta distinta. En el Instituto, un equipo coordinado diseña contigo un plan 360° que conecta todas las áreas que necesitas, desde la primera visita.</p>
+      <div class="valores">
+        <div class="valor"><h3 data-i18n="v1_t">Humanidad</h3><p data-i18n="v1_p">Que cada persona se sienta vista, escuchada y cuidada.</p></div>
+        <div class="valor"><h3 data-i18n="v2_t">Excelencia</h3><p data-i18n="v2_p">Protocolos rigurosos, profesionales especializados y resultados medibles. La seguridad no se negocia.</p></div>
+        <div class="valor"><h3 data-i18n="v3_t">Confianza</h3><p data-i18n="v3_p">Construida en cada visita, en cada resultado y en cada conversación honesta.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="pilares" id="pilares">
+  <div class="wrap">
+    <div class="cabeza revelar">
+      <p class="eyebrow" data-i18n="pil_eyebrow">Siete áreas, un solo programa</p>
+      <h2 data-i18n="pil_titulo">Nuestras áreas de especialidad</h2>
+      <p class="lead" data-i18n="pil_texto">Puedes venir por una necesidad concreta. Nosotros te ayudamos a ver el conjunto y a combinar solo lo que tiene sentido para ti.</p>
+    </div>
+    <div class="rejilla" id="rejilla-pilares"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="experiencia" id="experiencia">
+  <div class="wrap">
+    <div class="exp-img revelar"><img data-img="experiencia" alt="" loading="lazy"></div>
+    <div class="revelar">
+      <p class="eyebrow" data-i18n="exp_eyebrow">La experiencia</p>
+      <h2 data-i18n="exp_titulo">Cómo funciona</h2>
+      <p class="lead" data-i18n="exp_texto">Una relación continuada, no una consulta aislada.</p>
+      <ol class="pasos">
+        <li><div><h3 data-i18n="p1_t">Valoración 360°</h3><p data-i18n="p1_p">Te reunimos con tu coordinadora y el especialista para entender tu salud, tus objetivos y tus expectativas.</p></div></li>
+        <li><div><h3 data-i18n="p2_t">Plan personalizado</h3><p data-i18n="p2_p">Recibes tu plan con las áreas recomendadas, los pasos y el presupuesto, sin compromiso.</p></div></li>
+        <li><div><h3 data-i18n="p3_t">Tratamiento coordinado</h3><p data-i18n="p3_p">Accedes a cada especialidad en el centro HCB que te corresponda, con una sola persona de referencia.</p></div></li>
+        <li><div><h3 data-i18n="p4_t">Seguimiento continuo</h3><p data-i18n="p4_p">Revisiones periódicas, registro de tu evolución y acompañamiento después de cada tratamiento.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ HCB -->
+<section class="porque">
+  <div class="wrap">
+    <div class="cabeza revelar">
+      <p class="eyebrow" data-i18n="pq_eyebrow">Por qué HCB</p>
+      <h2 data-i18n="pq_titulo">Medicina hospitalaria con una experiencia cuidada al detalle</h2>
+      <p class="lead" data-i18n="pq_texto">La experiencia y los recursos de un grupo hospitalario, al servicio de tu bienestar.</p>
+    </div>
+    <div class="razones">
+      <div class="razon revelar"><h3 data-i18n="r1_t">Seguridad hospitalaria</h3><p data-i18n="r1_p">Quirófanos, anestesia y soporte médico de hospital para cada procedimiento que lo requiere.</p></div>
+      <div class="razon revelar"><h3 data-i18n="r2_t">Equipo multidisciplinar</h3><p data-i18n="r2_p">Cirujanos plásticos, médicos estéticos, endocrinos, ginecólogos, urólogos, nutricionistas y psicólogos coordinados.</p></div>
+      <div class="razon revelar"><h3 data-i18n="r3_t">Un solo interlocutor</h3><p data-i18n="r3_p">Una coordinadora te acompaña de principio a fin y organiza todas tus citas.</p></div>
+      <div class="razon revelar"><h3 data-i18n="r4_t">En tu idioma</h3><p data-i18n="r4_p">Atención en español, inglés, neerlandés y alemán, y opciones de pago flexibles.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CENTROS -->
+<section class="centros" id="centros">
+  <div class="wrap">
+    <div class="cabeza revelar">
+      <p class="eyebrow" data-i18n="c_eyebrow">Dónde atendemos</p>
+      <h2 data-i18n="c_titulo">Tres centros, un mismo programa</h2>
+      <p class="lead" data-i18n="c_texto">Empieza en el centro que te resulte más cómodo. Si tu tratamiento requiere quirófano, lo realizamos en el hospital HCB de referencia, sin que tengas que empezar de nuevo.</p>
+    </div>
+    <div class="centros-lista" id="lista-centros"></div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap revelar">
+    <p class="eyebrow" data-i18n="cf_eyebrow">Tu momento</p>
+    <h2 data-i18n="cf_titulo">Empieza por una conversación</h2>
+    <p class="lead" data-i18n="cf_texto">Cuéntanos qué te gustaría mejorar. Te llamamos y organizamos tu valoración en el centro que elijas.</p>
+    <a class="btn btn-primario" href="#solicitud" data-i18n="hero_cta">Solicitar valoración</a>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <div>
+      <img src="assets/logo-hcb-blanco.png" alt="Grupo HCB Hospitales" width="423" height="195">
+      <p data-i18n="pie_texto">HCB Instituto de Estética Integral y Longevidad es una unidad de Grupo HCB Hospitales.</p>
+    </div>
+    <div>
+      <h4 data-i18n="pie_contacto">Contacto</h4>
+      <ul>
+        <li><a href="tel:[TELEFONO_UNIDAD]" id="pie-tel">[TELÉFONO DE LA UNIDAD]</a></li>
+        <li><a href="mailto:[EMAIL_UNIDAD]" id="pie-mail">[EMAIL DE LA UNIDAD]</a></li>
+        <li><a href="#solicitud" data-i18n="cta_corto">Pedir cita</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="pie_legal">Información legal</h4>
+      <ul>
+        <li><a href="[URL_AVISO_LEGAL]" data-i18n="pie_aviso">Aviso legal</a></li>
+        <li><a href="[URL_POLITICA_PRIVACIDAD]" class="url-privacidad" data-i18n="pie_privacidad">Política de privacidad</a></li>
+        <li><a href="[URL_POLITICA_COOKIES]" data-i18n="pie_cookies">Política de cookies</a></li>
+      </ul>
+    </div>
+    <p class="base">© <span id="anio"></span> Grupo HCB Hospitales. <span data-i18n="pie_base">Los resultados de cualquier tratamiento médico pueden variar de una persona a otra. Toda indicación requiere valoración médica previa.</span></p>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   CONFIGURACIÓN — el equipo web solo necesita tocar este bloque
+   ========================================================================== */
+const CONFIG = {
+  endpoint: 'enviar.php',                       // script que recibe el formulario
+  demo: true,                                   // true = no envía datos (GitHub Pages). Poner false en el servidor de HCB
+  urlPrivacidad: '[URL_POLITICA_PRIVACIDAD]',
+  telefono: '[TELEFONO_UNIDAD]',                // p. ej. +34966000000
+  telefonoVisible: '[TELÉFONO DE LA UNIDAD]',
+  email: '[EMAIL_UNIDAD]',
+  // Imágenes de banco provisionales: sustituir por las imágenes licenciadas
+  // y alojadas en el servidor de HCB (ver LEEME.md).
+  imagenes: {
+    hero:        'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=75',
+    regenerativa:'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=70',
+    medicina:    'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=70',
+    cirugia:     'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=70',
+    capilar:     'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=70',
+    peso:        'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=70',
+    hormonal:    'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=70',
+    longevidad:  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=70',
+    experiencia: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=70'
+  },
+  centros: [
+    { id:'benidorm', nombre:'Hospital HCB Benidorm', tipo:'hospital', direccion:'[DIRECCIÓN BENIDORM]', telefono:'[TELÉFONO BENIDORM]', mapa:'[URL_MAPA_BENIDORM]' },
+    { id:'denia',    nombre:'Hospital HCB Dénia',    tipo:'hospital', direccion:'[DIRECCIÓN DÉNIA]',    telefono:'[TELÉFONO DÉNIA]',    mapa:'[URL_MAPA_DENIA]' },
+    { id:'calpe',    nombre:'Policlínica HCB Calpe', tipo:'policlinica', direccion:'[DIRECCIÓN CALPE]', telefono:'[TELÉFONO CALPE]',    mapa:'[URL_MAPA_CALPE]' }
+  ]
+};
+
+/* ==========================================================================
+   PILARES Y SUBPILARES — fuente única para tarjetas y formulario.
+   El valor que se envía y se guarda es siempre el nombre en español.
+   ========================================================================== */
+const PILARES = [
+  { id:'estetica-regenerativa', img:'regenerativa',
+    t:{es:'Estética Regenerativa',en:'Regenerative Aesthetics',nl:'Regeneratieve esthetiek',de:'Regenerative Ästhetik'},
+    d:{es:'Tratamientos que estimulan los mecanismos naturales de reparación de la piel y los tejidos para recuperar calidad, firmeza y luminosidad.',
+       en:'Treatments that stimulate the skin’s natural repair mechanisms to restore quality, firmness and radiance.',
+       nl:'Behandelingen die de natuurlijke herstelmechanismen van huid en weefsels stimuleren voor meer kwaliteit, stevigheid en uitstraling.',
+       de:'Behandlungen, die die natürlichen Reparaturmechanismen von Haut und Gewebe anregen – für mehr Qualität, Festigkeit und Ausstrahlung.'},
+    s:[ {id:'facial',  t:{es:'Tratamientos faciales',en:'Facial treatments',nl:'Gezichtsbehandelingen',de:'Gesichtsbehandlungen'}},
+        {id:'corporal',t:{es:'Tratamientos corporales',en:'Body treatments',nl:'Lichaamsbehandelingen',de:'Körperbehandlungen'}} ] },
+  { id:'medicina-estetica', img:'medicina',
+    t:{es:'Medicina Estética',en:'Aesthetic Medicine',nl:'Esthetische geneeskunde',de:'Ästhetische Medizin'},
+    d:{es:'Armonización facial y corporal con criterio médico, buscando siempre un resultado natural y coherente con quien eres.',
+       en:'Facial and body harmonisation guided by medical criteria, always seeking a natural result that suits who you are.',
+       nl:'Harmonisatie van gezicht en lichaam op medische basis, altijd gericht op een natuurlijk resultaat dat bij u past.',
+       de:'Harmonisierung von Gesicht und Körper nach medizinischen Kriterien – stets mit einem natürlichen Ergebnis, das zu Ihnen passt.'},
+    s:[ {id:'facial',     t:{es:'Medicina estética facial',en:'Facial aesthetic medicine',nl:'Esthetische geneeskunde gezicht',de:'Ästhetische Gesichtsmedizin'}},
+        {id:'corporal',   t:{es:'Medicina estética corporal',en:'Body aesthetic medicine',nl:'Esthetische geneeskunde lichaam',de:'Ästhetische Körpermedizin'}},
+        {id:'revitalizacion',t:{es:'Terapias de revitalización y bienestar',en:'Revitalisation and wellbeing therapies',nl:'Revitaliserende therapieën en welzijn',de:'Revitalisierungs- und Wohlfühltherapien'}} ] },
+  { id:'cirugia-plastica', img:'cirugia',
+    t:{es:'Cirugía Plástica',en:'Plastic Surgery',nl:'Plastische chirurgie',de:'Plastische Chirurgie'},
+    d:{es:'Procedimientos faciales, mamarios y corporales realizados por cirujanos plásticos en quirófanos hospitalarios.',
+       en:'Facial, breast and body procedures performed by plastic surgeons in hospital operating theatres.',
+       nl:'Ingrepen aan gezicht, borsten en lichaam, uitgevoerd door plastisch chirurgen in ziekenhuisoperatiekamers.',
+       de:'Eingriffe an Gesicht, Brust und Körper durch Fachärzte für Plastische Chirurgie in Krankenhaus-OPs.'},
+    s:[ {id:'facial',  t:{es:'Cirugía facial',en:'Facial surgery',nl:'Gezichtschirurgie',de:'Gesichtschirurgie'}},
+        {id:'mamaria', t:{es:'Cirugía mamaria',en:'Breast surgery',nl:'Borstchirurgie',de:'Brustchirurgie'}},
+        {id:'contorno',t:{es:'Cirugía del contorno corporal',en:'Body contouring surgery',nl:'Lichaamscontourchirurgie',de:'Körperkonturchirurgie'}} ] },
+  { id:'salud-capilar', img:'capilar',
+    t:{es:'Salud Capilar',en:'Hair Health',nl:'Haargezondheid',de:'Haargesundheit'},
+    d:{es:'Estudio del origen de la caída del cabello y tratamiento médico personalizado para frenarla y mejorar su densidad.',
+       en:'We identify the cause of hair loss and design a personalised medical treatment to slow it and improve density.',
+       nl:'Onderzoek naar de oorzaak van haaruitval en een persoonlijke medische behandeling om die te remmen en de haardichtheid te verbeteren.',
+       de:'Ursachenanalyse des Haarausfalls und individuelle medizinische Behandlung, um ihn zu bremsen und die Haardichte zu verbessern.'},
+    s:[ {id:'diagnostico', t:{es:'Diagnóstico tricológico',en:'Trichological diagnosis',nl:'Trichologische diagnose',de:'Trichologische Diagnostik'}},
+        {id:'tratamiento', t:{es:'Tratamiento médico-regenerativo capilar',en:'Medical and regenerative hair treatment',nl:'Medisch-regeneratieve haarbehandeling',de:'Medizinisch-regenerative Haarbehandlung'}} ] },
+  { id:'control-peso', img:'peso',
+    t:{es:'Control de Peso y Composición Corporal',en:'Weight Management and Body Composition',nl:'Gewichtsbeheersing en lichaamssamenstelling',de:'Gewichtsmanagement und Körperzusammensetzung'},
+    d:{es:'Abordaje médico, nutricional y psicológico del sobrepeso: desde opciones sin cirugía hasta la cirugía bariátrica, siempre con seguimiento.',
+       en:'A medical, nutritional and psychological approach to excess weight – from non-surgical options to bariatric surgery, always with follow-up.',
+       nl:'Een medische, voedingskundige en psychologische aanpak van overgewicht: van niet-chirurgische opties tot bariatrische chirurgie, altijd met nazorg.',
+       de:'Medizinischer, ernährungsbezogener und psychologischer Ansatz bei Übergewicht – von nicht-chirurgischen Optionen bis zur Adipositaschirurgie, immer mit Nachsorge.'},
+    s:[ {id:'medico',   t:{es:'Tratamiento médico del sobrepeso y la obesidad',en:'Medical treatment of overweight and obesity',nl:'Medische behandeling van overgewicht en obesitas',de:'Medizinische Behandlung von Übergewicht und Adipositas'}},
+        {id:'balon',    t:{es:'Balón intragástrico',en:'Intragastric balloon',nl:'Maagballon',de:'Magenballon'}},
+        {id:'bariatrica',t:{es:'Cirugía bariátrica',en:'Bariatric surgery',nl:'Bariatrische chirurgie',de:'Adipositaschirurgie'}},
+        {id:'nutricion',t:{es:'Nutrición y psicología clínica',en:'Nutrition and clinical psychology',nl:'Voeding en klinische psychologie',de:'Ernährung und klinische Psychologie'}} ] },
+  { id:'salud-hormonal', img:'hormonal',
+    t:{es:'Salud Hormonal y Metabólica',en:'Hormonal and Metabolic Health',nl:'Hormonale en metabole gezondheid',de:'Hormon- und Stoffwechselgesundheit'},
+    d:{es:'Valoración y acompañamiento de los cambios hormonales en cada etapa de la vida, en mujeres y hombres: energía, descanso, deseo, fertilidad y bienestar.',
+       en:'Assessment and support for hormonal changes at every stage of life, for women and men: energy, sleep, desire, fertility and wellbeing.',
+       nl:'Beoordeling en begeleiding van hormonale veranderingen in elke levensfase, bij vrouwen en mannen: energie, slaap, libido, vruchtbaarheid en welzijn.',
+       de:'Abklärung und Begleitung hormoneller Veränderungen in jeder Lebensphase, bei Frauen und Männern: Energie, Schlaf, Libido, Fruchtbarkeit und Wohlbefinden.'},
+    s:[ {id:'menopausia', t:{es:'Menopausia y perimenopausia',en:'Menopause and perimenopause',nl:'Menopauze en perimenopauze',de:'Wechseljahre und Perimenopause'}},
+        {id:'femenina',   t:{es:'Salud hormonal femenina',en:'Women’s hormonal health',nl:'Hormonale gezondheid vrouw',de:'Hormongesundheit der Frau'}},
+        {id:'masculina',  t:{es:'Salud hormonal masculina y fertilidad',en:'Men’s hormonal health and fertility',nl:'Hormonale gezondheid man en vruchtbaarheid',de:'Hormongesundheit des Mannes und Fruchtbarkeit'}},
+        {id:'chequeo',    t:{es:'Chequeo hormonal completo',en:'Complete hormonal check-up',nl:'Volledige hormooncheck',de:'Umfassender Hormon-Check'}} ] },
+  { id:'longevidad', img:'longevidad',
+    t:{es:'Longevidad y Well-Aging',en:'Longevity and Well-Aging',nl:'Longevity en well-aging',de:'Longevity und Well-Aging'},
+    d:{es:'Medicina preventiva para preservar la funcionalidad, la energía y la calidad de vida durante más tiempo.',
+       en:'Preventive medicine to preserve function, energy and quality of life for longer.',
+       nl:'Preventieve geneeskunde om functionaliteit, energie en levenskwaliteit langer te behouden.',
+       de:'Präventivmedizin, um Leistungsfähigkeit, Energie und Lebensqualität länger zu erhalten.'},
+    s:[ {id:'edad-biologica',t:{es:'Edad biológica y chequeo de longevidad',en:'Biological age and longevity check-up',nl:'Biologische leeftijd en longevity-check',de:'Biologisches Alter und Longevity-Check'}},
+        {id:'nutricion',     t:{es:'Nutrición de precisión y microbioma',en:'Precision nutrition and microbiome',nl:'Precisievoeding en microbioom',de:'Präzisionsernährung und Mikrobiom'}},
+        {id:'executive',     t:{es:'Programa Executive Longevity',en:'Executive Longevity Programme',nl:'Executive Longevity-programma',de:'Executive-Longevity-Programm'}} ] }
+];
+const V360 = { id:'valoracion-360',
+  t:{es:'Valoración 360° – aún no lo tengo claro',en:'360° assessment – I’m not sure yet',nl:'360°-beoordeling – ik weet het nog niet',de:'360°-Beratung – ich bin mir noch nicht sicher'},
+  s:[{id:'general',t:{es:'Valoración integral',en:'Comprehensive assessment',nl:'Integrale beoordeling',de:'Ganzheitliche Beratung'}}] };
+
+/* ==========================================================================
+   TEXTOS
+   ========================================================================== */
+const T = {
+es:{marca_sub:'Instituto de Estética Integral y Longevidad',nav_pilares:'Áreas',nav_experiencia:'Cómo funciona',nav_centros:'Centros',cta_corto:'Pedir cita',
+hero_eyebrow:'Grupo HCB Hospitales · Costa Blanca',hero_t1:'HCB Instituto de',hero_t2:'Estética Integral y Longevidad',hero_claim:'Equilibrio, imagen y longevidad. La ciencia de vivir mejor.',
+hero_texto:'Estética, cirugía plástica, salud capilar, control de peso, salud hormonal y longevidad, integrados en un único programa personalizado y con la seguridad de un entorno hospitalario.',
+hero_cta:'Solicitar valoración',hero_cta2:'Descubrir las áreas',sello_1:'Entorno hospitalario',sello_2:'Equipo multidisciplinar',sello_3:'Atención en ES · EN · NL · DE',
+form_titulo:'Solicita tu primera valoración',form_sub:'Una coordinadora te llamará para organizar tu visita.',f_nombre:'Nombre completo',f_tel:'Teléfono',f_tel_err:'Introduce un teléfono válido',
+f_area:'Área de interés',f_sub:'Tratamiento o necesidad',f_centro:'Centro donde quieres ser atendido/a',f_sel:'Selecciona una opción',f_sel_area:'Elige primero un área',f_req:'Campo obligatorio',
+f_priv:'He leído y acepto la <a href="#" class="url-privacidad" target="_blank" rel="noopener">política de privacidad</a>.',f_com:'Acepto recibir información sobre servicios y novedades de HCB (opcional).',
+f_enviar:'Enviar solicitud',f_enviando:'Enviando…',f_ok:'Gracias. Hemos recibido tu solicitud y una coordinadora te llamará en breve.',f_ko:'No hemos podido enviar tu solicitud. Inténtalo de nuevo o llámanos.',
+f_legal:'<strong>Responsable:</strong> Grupo HCB Hospitales. <strong>Finalidad:</strong> gestionar tu solicitud y contactarte. <strong>Legitimación:</strong> tu consentimiento. <strong>Derechos:</strong> acceso, rectificación, supresión y demás, según se indica en la <a href="#" class="url-privacidad" target="_blank" rel="noopener">política de privacidad</a>.',
+intro_eyebrow:'Nuestra visión',intro_titulo:'La salud no se entiende por partes',intro_cita:'La energía, la imagen, la composición corporal, el equilibrio hormonal y la vitalidad forman parte de una misma realidad. Por eso los cuidamos juntos.',
+intro_texto:'Hasta ahora, cada necesidad se atendía en una consulta distinta. En el Instituto, un equipo coordinado diseña contigo un plan 360° que conecta todas las áreas que necesitas, desde la primera visita.',
+v1_t:'Humanidad',v1_p:'Que cada persona se sienta vista, escuchada y cuidada.',v2_t:'Excelencia',v2_p:'Protocolos rigurosos, profesionales especializados y resultados medibles. La seguridad no se negocia.',v3_t:'Confianza',v3_p:'Construida en cada visita, en cada resultado y en cada conversación honesta.',
+pil_eyebrow:'Siete áreas, un solo programa',pil_titulo:'Nuestras áreas de especialidad',pil_texto:'Puedes venir por una necesidad concreta. Nosotros te ayudamos a ver el conjunto y a combinar solo lo que tiene sentido para ti.',
+pil_mas:'Me interesa',v360_t:'¿No sabes por dónde empezar?',v360_p:'Reserva una valoración 360°: revisamos contigo tu salud y tus objetivos, y te proponemos el camino más adecuado.',v360_btn:'Quiero una valoración 360°',
+exp_eyebrow:'La experiencia',exp_titulo:'Cómo funciona',exp_texto:'Una relación continuada, no una consulta aislada.',
+p1_t:'Valoración 360°',p1_p:'Te reunimos con tu coordinadora y el especialista para entender tu salud, tus objetivos y tus expectativas.',p2_t:'Plan personalizado',p2_p:'Recibes tu plan con las áreas recomendadas, los pasos y el presupuesto, sin compromiso.',
+p3_t:'Tratamiento coordinado',p3_p:'Accedes a cada especialidad en el centro HCB que te corresponda, con una sola persona de referencia.',p4_t:'Seguimiento continuo',p4_p:'Revisiones periódicas, registro de tu evolución y acompañamiento después de cada tratamiento.',
+pq_eyebrow:'Por qué HCB',pq_titulo:'Medicina hospitalaria con una experiencia cuidada al detalle',pq_texto:'La experiencia y los recursos de un grupo hospitalario, al servicio de tu bienestar.',
+r1_t:'Seguridad hospitalaria',r1_p:'Quirófanos, anestesia y soporte médico de hospital para cada procedimiento que lo requiere.',r2_t:'Equipo multidisciplinar',r2_p:'Cirujanos plásticos, médicos estéticos, endocrinos, ginecólogos, urólogos, nutricionistas y psicólogos coordinados.',
+r3_t:'Un solo interlocutor',r3_p:'Una coordinadora te acompaña de principio a fin y organiza todas tus citas.',r4_t:'En tu idioma',r4_p:'Atención en español, inglés, neerlandés y alemán, y opciones de pago flexibles.',
+c_eyebrow:'Dónde atendemos',c_titulo:'Tres centros, un mismo programa',c_texto:'Empieza en el centro que te resulte más cómodo. Si tu tratamiento requiere quirófano, lo realizamos en el hospital HCB de referencia, sin que tengas que empezar de nuevo.',
+c_hospital:'Hospital',c_policlinica:'Policlínica',c_hospital_p:'Consultas de todas las áreas y quirófano para los procedimientos quirúrgicos.',c_policlinica_p:'Consultas, medicina estética y tratamientos. La cirugía se realiza en el hospital HCB de referencia.',
+c_cita:'Pedir cita aquí',c_mapa:'Cómo llegar',
+cf_eyebrow:'Tu momento',cf_titulo:'Empieza por una conversación',cf_texto:'Cuéntanos qué te gustaría mejorar. Te llamamos y organizamos tu valoración en el centro que elijas.',
+f_demo:'Versión de demostración: el formulario no envía datos.',pie_texto:'HCB Instituto de Estética Integral y Longevidad es una unidad de Grupo HCB Hospitales.',pie_contacto:'Contacto',pie_legal:'Información legal',pie_aviso:'Aviso legal',pie_privacidad:'Política de privacidad',pie_cookies:'Política de cookies',
+pie_base:'Los resultados de cualquier tratamiento médico pueden variar de una persona a otra. Toda indicación requiere valoración médica previa.'},
+
+en:{marca_sub:'Institute of Integrative Aesthetics and Longevity',nav_pilares:'Areas',nav_experiencia:'How it works',nav_centros:'Locations',cta_corto:'Book a visit',
+hero_eyebrow:'HCB Hospitals Group · Costa Blanca',hero_t1:'HCB Institute of',hero_t2:'Integrative Aesthetics and Longevity',hero_claim:'Balance, image and longevity. The science of living better.',
+hero_texto:'Aesthetics, plastic surgery, hair health, weight management, hormonal health and longevity, brought together in one personalised programme with the safety of a hospital setting.',
+hero_cta:'Request an assessment',hero_cta2:'Explore our areas',sello_1:'Hospital setting',sello_2:'Multidisciplinary team',sello_3:'Care in ES · EN · NL · DE',
+form_titulo:'Request your first assessment',form_sub:'A patient coordinator will call you to arrange your visit.',f_nombre:'Full name',f_tel:'Phone',f_tel_err:'Please enter a valid phone number',
+f_area:'Area of interest',f_sub:'Treatment or need',f_centro:'Preferred location',f_sel:'Select an option',f_sel_area:'Choose an area first',f_req:'Required field',
+f_priv:'I have read and accept the <a href="#" class="url-privacidad" target="_blank" rel="noopener">privacy policy</a>.',f_com:'I agree to receive information about HCB services and news (optional).',
+f_enviar:'Send request',f_enviando:'Sending…',f_ok:'Thank you. We have received your request and a coordinator will call you shortly.',f_ko:'We could not send your request. Please try again or call us.',
+f_legal:'<strong>Data controller:</strong> HCB Hospitals Group. <strong>Purpose:</strong> to handle your request and contact you. <strong>Legal basis:</strong> your consent. <strong>Rights:</strong> access, rectification, erasure and others, as set out in our <a href="#" class="url-privacidad" target="_blank" rel="noopener">privacy policy</a>.',
+intro_eyebrow:'Our vision',intro_titulo:'Health cannot be understood in parts',intro_cita:'Energy, appearance, body composition, hormonal balance and vitality are all part of the same reality. That is why we care for them together.',
+intro_texto:'Until now, every need was treated in a different consultation. At the Institute, a coordinated team designs a 360° plan with you that connects every area you need, from the very first visit.',
+v1_t:'Humanity',v1_p:'Every person should feel seen, heard and cared for.',v2_t:'Excellence',v2_p:'Rigorous protocols, specialised professionals and measurable results. Safety is never negotiable.',v3_t:'Trust',v3_p:'Built at every visit, with every result and in every honest conversation.',
+pil_eyebrow:'Seven areas, one programme',pil_titulo:'Our areas of expertise',pil_texto:'You may come to us for one specific need. We help you see the bigger picture and combine only what makes sense for you.',
+pil_mas:'I’m interested',v360_t:'Not sure where to start?',v360_p:'Book a 360° assessment: we review your health and goals with you and suggest the most suitable path.',v360_btn:'I want a 360° assessment',
+exp_eyebrow:'The experience',exp_titulo:'How it works',exp_texto:'An ongoing relationship, not a one-off appointment.',
+p1_t:'360° assessment',p1_p:'You meet your coordinator and the specialist so we can understand your health, goals and expectations.',p2_t:'Personalised plan',p2_p:'You receive your plan with the recommended areas, steps and quote, with no obligation.',
+p3_t:'Coordinated treatment',p3_p:'You access each speciality at the right HCB centre, with a single point of contact.',p4_t:'Ongoing follow-up',p4_p:'Regular reviews, a record of your progress and support after every treatment.',
+pq_eyebrow:'Why HCB',pq_titulo:'Hospital medicine with a carefully designed experience',pq_texto:'The experience and resources of a hospital group, devoted to your wellbeing.',
+r1_t:'Hospital safety',r1_p:'Operating theatres, anaesthesia and hospital medical support for every procedure that requires it.',r2_t:'Multidisciplinary team',r2_p:'Plastic surgeons, aesthetic doctors, endocrinologists, gynaecologists, urologists, dietitians and psychologists working together.',
+r3_t:'One point of contact',r3_p:'A coordinator supports you from start to finish and organises all your appointments.',r4_t:'In your language',r4_p:'Care in Spanish, English, Dutch and German, and flexible payment options.',
+c_eyebrow:'Where we are',c_titulo:'Three centres, one programme',c_texto:'Start at the centre that suits you best. If your treatment requires surgery, it is performed at the designated HCB hospital, without starting over.',
+c_hospital:'Hospital',c_policlinica:'Polyclinic',c_hospital_p:'Consultations in every area and operating theatres for surgical procedures.',c_policlinica_p:'Consultations, aesthetic medicine and treatments. Surgery takes place at the designated HCB hospital.',
+c_cita:'Book here',c_mapa:'Get directions',
+cf_eyebrow:'Your moment',cf_titulo:'It all starts with a conversation',cf_texto:'Tell us what you would like to improve. We will call you and arrange your assessment at the centre of your choice.',
+f_demo:'Demo version: this form does not send any data.',pie_texto:'HCB Institute of Integrative Aesthetics and Longevity is a unit of HCB Hospitals Group.',pie_contacto:'Contact',pie_legal:'Legal information',pie_aviso:'Legal notice',pie_privacidad:'Privacy policy',pie_cookies:'Cookie policy',
+pie_base:'Results of any medical treatment may vary from person to person. Every treatment requires a prior medical assessment.'},
+
+nl:{marca_sub:'Instituut voor integrale esthetiek en longevity',nav_pilares:'Specialismen',nav_experiencia:'Werkwijze',nav_centros:'Locaties',cta_corto:'Afspraak maken',
+hero_eyebrow:'HCB Ziekenhuisgroep · Costa Blanca',hero_t1:'HCB Instituut voor',hero_t2:'Integrale esthetiek en longevity',hero_claim:'Balans, uitstraling en longevity. De wetenschap van beter leven.',
+hero_texto:'Esthetiek, plastische chirurgie, haargezondheid, gewichtsbeheersing, hormonale gezondheid en longevity, samengebracht in één persoonlijk programma met de zekerheid van een ziekenhuisomgeving.',
+hero_cta:'Beoordeling aanvragen',hero_cta2:'Ontdek onze specialismen',sello_1:'Ziekenhuisomgeving',sello_2:'Multidisciplinair team',sello_3:'Zorg in ES · EN · NL · DE',
+form_titulo:'Vraag uw eerste beoordeling aan',form_sub:'Een coördinator belt u om uw bezoek in te plannen.',f_nombre:'Volledige naam',f_tel:'Telefoon',f_tel_err:'Vul een geldig telefoonnummer in',
+f_area:'Interessegebied',f_sub:'Behandeling of wens',f_centro:'Voorkeurslocatie',f_sel:'Maak een keuze',f_sel_area:'Kies eerst een specialisme',f_req:'Verplicht veld',
+f_priv:'Ik heb het <a href="#" class="url-privacidad" target="_blank" rel="noopener">privacybeleid</a> gelezen en ga ermee akkoord.',f_com:'Ik wil graag informatie ontvangen over diensten en nieuws van HCB (optioneel).',
+f_enviar:'Aanvraag versturen',f_enviando:'Versturen…',f_ok:'Dank u. We hebben uw aanvraag ontvangen en een coördinator belt u binnenkort.',f_ko:'Uw aanvraag kon niet worden verstuurd. Probeer het opnieuw of bel ons.',
+f_legal:'<strong>Verwerkingsverantwoordelijke:</strong> HCB Ziekenhuisgroep. <strong>Doel:</strong> uw aanvraag behandelen en contact met u opnemen. <strong>Grondslag:</strong> uw toestemming. <strong>Rechten:</strong> inzage, rectificatie, verwijdering en andere, zoals beschreven in ons <a href="#" class="url-privacidad" target="_blank" rel="noopener">privacybeleid</a>.',
+intro_eyebrow:'Onze visie',intro_titulo:'Gezondheid bestaat niet uit losse onderdelen',intro_cita:'Energie, uitstraling, lichaamssamenstelling, hormonale balans en vitaliteit horen bij elkaar. Daarom zorgen we er samen voor.',
+intro_texto:'Tot nu toe werd elke zorgvraag in een aparte consulting behandeld. In het Instituut stelt een gecoördineerd team samen met u een 360°-plan op dat alle benodigde specialismen verbindt, vanaf het eerste bezoek.',
+v1_t:'Menselijkheid',v1_p:'Iedereen moet zich gezien, gehoord en verzorgd voelen.',v2_t:'Excellentie',v2_p:'Strikte protocollen, gespecialiseerde professionals en meetbare resultaten. Over veiligheid valt niet te onderhandelen.',v3_t:'Vertrouwen',v3_p:'Opgebouwd bij elk bezoek, elk resultaat en elk eerlijk gesprek.',
+pil_eyebrow:'Zeven specialismen, één programma',pil_titulo:'Onze specialismen',pil_texto:'U kunt bij ons komen voor één specifieke wens. Wij helpen u het geheel te zien en alleen te combineren wat voor u zinvol is.',
+pil_mas:'Interesse',v360_t:'Weet u niet waar te beginnen?',v360_p:'Plan een 360°-beoordeling: we bespreken uw gezondheid en doelen en stellen de meest geschikte route voor.',v360_btn:'Ik wil een 360°-beoordeling',
+exp_eyebrow:'De ervaring',exp_titulo:'Zo werkt het',exp_texto:'Een doorlopende relatie, geen losse afspraak.',
+p1_t:'360°-beoordeling',p1_p:'U spreekt met uw coördinator en de specialist, zodat wij uw gezondheid, doelen en verwachtingen begrijpen.',p2_t:'Persoonlijk plan',p2_p:'U ontvangt uw plan met de aanbevolen specialismen, stappen en offerte, vrijblijvend.',
+p3_t:'Gecoördineerde behandeling',p3_p:'U krijgt toegang tot elk specialisme in het juiste HCB-centrum, met één vast aanspreekpunt.',p4_t:'Doorlopende nazorg',p4_p:'Regelmatige controles, vastlegging van uw voortgang en begeleiding na elke behandeling.',
+pq_eyebrow:'Waarom HCB',pq_titulo:'Ziekenhuisgeneeskunde met een zorgvuldig ontworpen ervaring',pq_texto:'De ervaring en middelen van een ziekenhuisgroep, ten dienste van uw welzijn.',
+r1_t:'Ziekenhuisveiligheid',r1_p:'Operatiekamers, anesthesie en medische ondersteuning van een ziekenhuis voor elke ingreep die dat vraagt.',r2_t:'Multidisciplinair team',r2_p:'Plastisch chirurgen, esthetisch artsen, endocrinologen, gynaecologen, urologen, diëtisten en psychologen werken samen.',
+r3_t:'Eén aanspreekpunt',r3_p:'Een coördinator begeleidt u van begin tot eind en plant al uw afspraken.',r4_t:'In uw taal',r4_p:'Zorg in het Spaans, Engels, Nederlands en Duits, en flexibele betaalmogelijkheden.',
+c_eyebrow:'Waar wij zijn',c_titulo:'Drie centra, één programma',c_texto:'Begin in het centrum dat u het beste uitkomt. Vraagt uw behandeling om een operatie, dan vindt die plaats in het aangewezen HCB-ziekenhuis, zonder opnieuw te beginnen.',
+c_hospital:'Ziekenhuis',c_policlinica:'Polikliniek',c_hospital_p:'Consulten voor alle specialismen en operatiekamers voor chirurgische ingrepen.',c_policlinica_p:'Consulten, esthetische geneeskunde en behandelingen. Operaties vinden plaats in het aangewezen HCB-ziekenhuis.',
+c_cita:'Hier afspraak maken',c_mapa:'Routebeschrijving',
+cf_eyebrow:'Uw moment',cf_titulo:'Het begint met een gesprek',cf_texto:'Vertel ons wat u zou willen verbeteren. Wij bellen u en plannen uw beoordeling in het centrum van uw keuze.',
+f_demo:'Demoversie: dit formulier verstuurt geen gegevens.',pie_texto:'HCB Instituut voor integrale esthetiek en longevity is een eenheid van de HCB Ziekenhuisgroep.',pie_contacto:'Contact',pie_legal:'Juridische informatie',pie_aviso:'Juridische kennisgeving',pie_privacidad:'Privacybeleid',pie_cookies:'Cookiebeleid',
+pie_base:'De resultaten van een medische behandeling kunnen per persoon verschillen. Elke behandeling vereist een voorafgaande medische beoordeling.'},
+
+de:{marca_sub:'Institut für ganzheitliche Ästhetik und Longevity',nav_pilares:'Bereiche',nav_experiencia:'Ablauf',nav_centros:'Standorte',cta_corto:'Termin anfragen',
+hero_eyebrow:'HCB Krankenhausgruppe · Costa Blanca',hero_t1:'HCB Institut für',hero_t2:'Ganzheitliche Ästhetik und Longevity',hero_claim:'Balance, Ausstrahlung und Longevity. Die Wissenschaft vom besseren Leben.',
+hero_texto:'Ästhetik, Plastische Chirurgie, Haargesundheit, Gewichtsmanagement, Hormongesundheit und Longevity – vereint in einem persönlichen Programm mit der Sicherheit eines Krankenhauses.',
+hero_cta:'Beratung anfragen',hero_cta2:'Bereiche entdecken',sello_1:'Krankenhausumfeld',sello_2:'Interdisziplinäres Team',sello_3:'Betreuung auf ES · EN · NL · DE',
+form_titulo:'Fragen Sie Ihre Erstberatung an',form_sub:'Eine Patientenkoordinatorin ruft Sie an, um Ihren Besuch zu planen.',f_nombre:'Vollständiger Name',f_tel:'Telefon',f_tel_err:'Bitte geben Sie eine gültige Telefonnummer ein',
+f_area:'Interessensbereich',f_sub:'Behandlung oder Anliegen',f_centro:'Bevorzugter Standort',f_sel:'Bitte auswählen',f_sel_area:'Zuerst einen Bereich wählen',f_req:'Pflichtfeld',
+f_priv:'Ich habe die <a href="#" class="url-privacidad" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und akzeptiere sie.',f_com:'Ich möchte Informationen über Leistungen und Neuigkeiten von HCB erhalten (optional).',
+f_enviar:'Anfrage senden',f_enviando:'Wird gesendet…',f_ok:'Vielen Dank. Wir haben Ihre Anfrage erhalten; eine Koordinatorin ruft Sie in Kürze an.',f_ko:'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie uns an.',
+f_legal:'<strong>Verantwortlicher:</strong> HCB Krankenhausgruppe. <strong>Zweck:</strong> Bearbeitung Ihrer Anfrage und Kontaktaufnahme. <strong>Rechtsgrundlage:</strong> Ihre Einwilligung. <strong>Rechte:</strong> Auskunft, Berichtigung, Löschung u. a., wie in der <a href="#" class="url-privacidad" target="_blank" rel="noopener">Datenschutzerklärung</a> beschrieben.',
+intro_eyebrow:'Unsere Vision',intro_titulo:'Gesundheit lässt sich nicht in Teile zerlegen',intro_cita:'Energie, Ausstrahlung, Körperzusammensetzung, hormonelles Gleichgewicht und Vitalität gehören zusammen. Deshalb kümmern wir uns gemeinsam darum.',
+intro_texto:'Bisher wurde jedes Anliegen in einer eigenen Sprechstunde behandelt. Im Institut erstellt ein koordiniertes Team gemeinsam mit Ihnen einen 360°-Plan, der alle benötigten Bereiche verbindet – vom ersten Besuch an.',
+v1_t:'Menschlichkeit',v1_p:'Jeder Mensch soll sich gesehen, gehört und umsorgt fühlen.',v2_t:'Exzellenz',v2_p:'Strenge Protokolle, spezialisierte Fachkräfte und messbare Ergebnisse. Bei der Sicherheit gibt es keine Kompromisse.',v3_t:'Vertrauen',v3_p:'Aufgebaut bei jedem Besuch, mit jedem Ergebnis und in jedem ehrlichen Gespräch.',
+pil_eyebrow:'Sieben Bereiche, ein Programm',pil_titulo:'Unsere Fachbereiche',pil_texto:'Sie können mit einem konkreten Anliegen zu uns kommen. Wir helfen Ihnen, das Gesamtbild zu sehen, und kombinieren nur, was für Sie sinnvoll ist.',
+pil_mas:'Ich bin interessiert',v360_t:'Sie wissen nicht, wo Sie anfangen sollen?',v360_p:'Buchen Sie eine 360°-Beratung: Wir besprechen Ihre Gesundheit und Ziele und schlagen Ihnen den passenden Weg vor.',v360_btn:'Ich möchte eine 360°-Beratung',
+exp_eyebrow:'Das Erlebnis',exp_titulo:'So funktioniert es',exp_texto:'Eine kontinuierliche Begleitung statt eines einzelnen Termins.',
+p1_t:'360°-Beratung',p1_p:'Sie treffen Ihre Koordinatorin und den Facharzt, damit wir Ihre Gesundheit, Ziele und Erwartungen verstehen.',p2_t:'Persönlicher Plan',p2_p:'Sie erhalten Ihren Plan mit den empfohlenen Bereichen, Schritten und einem Kostenvoranschlag – unverbindlich.',
+p3_t:'Koordinierte Behandlung',p3_p:'Sie erhalten Zugang zu jedem Fachbereich am passenden HCB-Standort – mit einer festen Ansprechperson.',p4_t:'Kontinuierliche Nachsorge',p4_p:'Regelmäßige Kontrollen, Dokumentation Ihrer Fortschritte und Begleitung nach jeder Behandlung.',
+pq_eyebrow:'Warum HCB',pq_titulo:'Krankenhausmedizin mit einem sorgfältig gestalteten Erlebnis',pq_texto:'Die Erfahrung und die Ressourcen einer Krankenhausgruppe im Dienst Ihres Wohlbefindens.',
+r1_t:'Krankenhaussicherheit',r1_p:'OP-Säle, Anästhesie und ärztliche Versorgung eines Krankenhauses für jeden Eingriff, der dies erfordert.',r2_t:'Interdisziplinäres Team',r2_p:'Plastische Chirurgen, Ästhetikmediziner, Endokrinologen, Gynäkologen, Urologen, Ernährungsberater und Psychologen arbeiten zusammen.',
+r3_t:'Eine Ansprechperson',r3_p:'Eine Koordinatorin begleitet Sie von Anfang bis Ende und organisiert alle Ihre Termine.',r4_t:'In Ihrer Sprache',r4_p:'Betreuung auf Spanisch, Englisch, Niederländisch und Deutsch sowie flexible Zahlungsmöglichkeiten.',
+c_eyebrow:'Unsere Standorte',c_titulo:'Drei Zentren, ein Programm',c_texto:'Beginnen Sie im Zentrum, das für Sie am bequemsten ist. Erfordert Ihre Behandlung eine Operation, erfolgt sie im zuständigen HCB-Krankenhaus – ohne von vorn zu beginnen.',
+c_hospital:'Krankenhaus',c_policlinica:'Poliklinik',c_hospital_p:'Sprechstunden in allen Bereichen sowie OP-Säle für chirurgische Eingriffe.',c_policlinica_p:'Sprechstunden, ästhetische Medizin und Behandlungen. Operationen erfolgen im zuständigen HCB-Krankenhaus.',
+c_cita:'Hier Termin anfragen',c_mapa:'Anfahrt',
+cf_eyebrow:'Ihr Moment',cf_titulo:'Alles beginnt mit einem Gespräch',cf_texto:'Erzählen Sie uns, was Sie verbessern möchten. Wir rufen Sie an und planen Ihre Beratung am Standort Ihrer Wahl.',
+f_demo:'Demoversion: Dieses Formular sendet keine Daten.',pie_texto:'Das HCB Institut für ganzheitliche Ästhetik und Longevity ist eine Einheit der HCB Krankenhausgruppe.',pie_contacto:'Kontakt',pie_legal:'Rechtliche Hinweise',pie_aviso:'Impressum',pie_privacidad:'Datenschutzerklärung',pie_cookies:'Cookie-Richtlinie',
+pie_base:'Die Ergebnisse medizinischer Behandlungen können von Person zu Person variieren. Jede Behandlung setzt eine ärztliche Untersuchung voraus.'}
+};
+
+/* ==========================================================================
+   LÓGICA
+   ========================================================================== */
+(function(){
+  const IDIOMAS=['es','en','nl','de'];
+  let lang='es';
+  const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const tx=k=>(T[lang]&&T[lang][k])||T.es[k]||'';
+
+  // Imágenes con caída elegante si no cargan
+  function ponerImagen(img,clave){
+    const url=CONFIG.imagenes[clave]; if(!url){img.remove();return;}
+    img.addEventListener('error',()=>img.remove(),{once:true});
+    img.src=url;
+  }
+
+  function pintarPilares(){
+    const cont=$('#rejilla-pilares');
+    cont.innerHTML=PILARES.map((p,i)=>`
+      <article class="pilar revelar visible">
+        <div class="foto"><img data-img="${p.img}" alt="" loading="lazy"></div>
+        <div class="cuerpo">
+          <span class="num">${String(i+1).padStart(2,'0')}</span>
+          <h3>${esc(p.t[lang])}</h3>
+          <p>${esc(p.d[lang])}</p>
+          <ul>${p.s.map(s=>`<li>${esc(s.t[lang])}</li>`).join('')}</ul>
+          <button type="button" class="mas" data-pilar="${p.id}">${esc(tx('pil_mas'))} →</button>
+        </div>
+      </article>`).join('')+`
+      <article class="pilar v360 revelar visible">
+        <div class="cuerpo">
+          <span class="num">360°</span>
+          <h3>${esc(tx('v360_t'))}</h3>
+          <p>${esc(tx('v360_p'))}</p>
+          <button type="button" class="mas" data-pilar="${V360.id}">${esc(tx('v360_btn'))} →</button>
+        </div>
+      </article>`;
+    cont.querySelectorAll('img[data-img]').forEach(im=>ponerImagen(im,im.dataset.img));
+  }
+
+  function pintarCentros(){
+    $('#lista-centros').innerHTML=CONFIG.centros.map(c=>`
+      <div class="centro revelar visible">
+        <span class="tipo">${esc(tx('c_'+c.tipo))}</span>
+        <h3>${esc(c.nombre)}</h3>
+        <p>${esc(tx('c_'+c.tipo+'_p'))}</p>
+        <span class="dato">${esc(c.direccion)}</span>
+        <span class="dato">${esc(c.telefono)}</span>
+        <a class="btn btn-linea" href="#solicitud" data-centro="${c.id}">${esc(tx('c_cita'))}</a>
+      </div>`).join('');
+  }
+
+  function opciones(sel,items,placeholder,valor){
+    sel.innerHTML=`<option value="">${esc(placeholder)}</option>`+items.map(o=>`<option value="${o.id}">${esc(o.label)}</option>`).join('');
+    if(valor && items.some(o=>o.id===valor)) sel.value=valor;
+  }
+  function todosPilares(){return PILARES.concat([V360]);}
+  function pintarSelects(){
+    const sp=$('#pilar'),ss=$('#subpilar'),sc=$('#centro');
+    const vp=sp.value,vs=ss.value,vc=sc.value;
+    opciones(sp,todosPilares().map(p=>({id:p.id,label:p.t[lang]})),tx('f_sel'),vp);
+    opciones(sc,CONFIG.centros.map(c=>({id:c.id,label:c.nombre})),tx('f_sel'),vc);
+    pintarSub(vs);
+  }
+  function pintarSub(valor){
+    const sp=$('#pilar'),ss=$('#subpilar');
+    const p=todosPilares().find(x=>x.id===sp.value);
+    if(!p){opciones(ss,[],tx('f_sel_area'));ss.disabled=true;return;}
+    ss.disabled=false;
+    opciones(ss,p.s.map(s=>({id:s.id,label:s.t[lang]})),tx('f_sel'),valor);
+    if(p.s.length===1) ss.value=p.s[0].id;
+  }
+
+  function aplicarIdioma(l){
+    lang=IDIOMAS.includes(l)?l:'es';
+    document.documentElement.lang=lang;
+    $$('[data-i18n]').forEach(el=>{el.textContent=tx(el.dataset.i18n);});
+    $$('[data-i18n-html]').forEach(el=>{el.innerHTML=tx(el.dataset.i18nHtml);});
+    $$('.idiomas button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+    document.title='HCB · '+tx('marca_sub');
+    $$('.url-privacidad').forEach(a=>a.href=CONFIG.urlPrivacidad);
+    pintarPilares(); pintarCentros(); pintarSelects();
+    try{localStorage.setItem('hcb_idioma',lang);}catch(e){}
+  }
+
+  // Idioma inicial: ?lang= > guardado > navegador > es
+  function idiomaInicial(){
+    const q=new URLSearchParams(location.search).get('lang');
+    if(q&&IDIOMAS.includes(q))return q;
+    try{const g=localStorage.getItem('hcb_idioma');if(g&&IDIOMAS.includes(g))return g;}catch(e){}
+    const n=(navigator.language||'es').slice(0,2).toLowerCase();
+    return IDIOMAS.includes(n)?n:'es';
+  }
+
+  // Preselección desde tarjetas y centros
+  document.addEventListener('click',e=>{
+    const bp=e.target.closest('[data-pilar]');
+    if(bp){ $('#pilar').value=bp.dataset.pilar; pintarSub(); irAlFormulario(); }
+    const bc=e.target.closest('[data-centro]');
+    if(bc){ e.preventDefault(); $('#centro').value=bc.dataset.centro; irAlFormulario(); }
+    const bl=e.target.closest('.idiomas button');
+    if(bl) aplicarIdioma(bl.dataset.lang);
+  });
+  function irAlFormulario(){
+    $('#solicitud').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    setTimeout(()=>{const f=['#nombre','#telefono','#pilar','#subpilar','#centro'].map($).find(x=>!x.value);(f||$('#nombre')).focus({preventScroll:true});},450);
+  }
+  $('#pilar').addEventListener('change',()=>{pintarSub();marcar($('#pilar'),true);});
+
+  // Validación
+  function marcar(el,ok){const c=el.closest('.campo');if(c)c.classList.toggle('invalido',!ok);}
+  function telValido(v){return v.replace(/\D/g,'').length>=9 && /^[+\d\s().-]+$/.test(v.trim());}
+  function validar(){
+    let ok=true;
+    const n=$('#nombre'),t=$('#telefono');
+    const vn=n.value.trim().length>=3; marcar(n,vn); ok=ok&&vn;
+    const vt=telValido(t.value); marcar(t,vt); ok=ok&&vt;
+    ['#pilar','#subpilar','#centro'].forEach(s=>{const v=!!$(s).value;marcar($(s),v);ok=ok&&v;});
+    const priv=document.querySelector('[name=consentimiento_privacidad]');
+    $('#chk-priv').classList.toggle('invalido',!priv.checked); ok=ok&&priv.checked;
+    return ok;
+  }
+  $$('#solicitud input, #solicitud select').forEach(el=>el.addEventListener('input',()=>{
+    const c=el.closest('.campo'); if(c&&c.classList.contains('invalido')) marcar(el,!!el.value.trim());
+    if(el.name==='consentimiento_privacidad') $('#chk-priv').classList.remove('invalido');
+  }));
+
+  // Envío
+  $('#solicitud').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const estado=$('.estado'),boton=e.target.querySelector('button[type=submit]');
+    estado.className='estado';
+    if(!validar()){const p=e.target.querySelector('.invalido input,.invalido select,.check.invalido input');if(p)p.focus();return;}
+    const p=todosPilares().find(x=>x.id===$('#pilar').value);
+    const s=p.s.find(x=>x.id===$('#subpilar').value);
+    const c=CONFIG.centros.find(x=>x.id===$('#centro').value);
+    const fd=new FormData(e.target);
+    fd.set('pilar',p.t.es); fd.set('subpilar',s.t.es); fd.set('centro',c.nombre);
+    fd.set('idioma',lang); fd.set('pagina',location.href.split('#')[0]);
+    const q=new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k=>fd.set(k,q.get(k)||''));
+    if(CONFIG.demo){ estado.className='estado ok'; estado.textContent=tx('f_demo'); e.target.reset(); pintarSub(); return; }
+    boton.disabled=true; boton.textContent=tx('f_enviando');
+    try{
+      const r=await fetch(CONFIG.endpoint,{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||!j.ok) throw new Error(j.error||'error');
+      estado.className='estado ok'; estado.textContent=tx('f_ok');
+      e.target.reset(); pintarSub();
+      if(window.dataLayer) window.dataLayer.push({event:'lead_hcb_instituto',pilar:p.t.es,centro:c.nombre});
+    }catch(err){
+      estado.className='estado ko';
+      estado.textContent=tx('f_ko')+(CONFIG.telefono.startsWith('[')?'':' '+CONFIG.telefonoVisible);
+    }finally{
+      boton.disabled=false; boton.textContent=tx('f_enviar');
+    }
+  });
+
+  // Animación de entrada
+  const io='IntersectionObserver' in window ? new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}}),{threshold:.12}) : null;
+  $$('.revelar').forEach(el=>io?io.observe(el):el.classList.add('visible'));
+
+  // Arranque
+  $$('img[data-img]').forEach(im=>ponerImagen(im,im.dataset.img));
+  if(!CONFIG.telefono.startsWith('[')){ $('#pie-tel').href='tel:'+CONFIG.telefono; $('#pie-tel').textContent=CONFIG.telefonoVisible; }
+  if(!CONFIG.email.startsWith('[')){ $('#pie-mail').href='mailto:'+CONFIG.email; $('#pie-mail').textContent=CONFIG.email; }
+  $('#anio').textContent=new Date().getFullYear();
+  aplicarIdioma(idiomaInicial());
+})();
+</script>
+</body>
+</html>
